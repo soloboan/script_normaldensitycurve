@@ -2,10 +2,10 @@
 
 # using EBVs as an example
 ## import EBVs
-EBV_A <- read.table('',stringsAsFactors = F)
-EBV_B <- read.table('',stringsAsFactors = F)
-EBV_A <- rnorm(10000,mean=0,100)
-EBV_B <- rnorm(10000,mean=100,100)
+EBV_A <- read.table('example/EBV_A.txt',stringsAsFactors = F)[,2]
+EBV_B <- read.table('example/EBV_B.txt',stringsAsFactors = F)[,2]
+#EBV_A <- rnorm(10000,mean=0,100)
+#EBV_B <- rnorm(10000,mean=100,100)
 
 ## compute the kernels of the EBVs
 densEBV_A <- density(EBV_A,adjust=2)
