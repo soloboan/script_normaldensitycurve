@@ -25,8 +25,8 @@ lines(densEBV_B,lty="dotted",col="red",lwd=2)
 legend('topright',legend=namesEBV_AB,col=c('darkgreen','red'),bty='n',lty=2)
 
 ## add lines for the means if needed
-abline(v=mean(EBV_A),col='grey',lwd=1,col="darkgreen")
-abline(v=mean(EBV_B),col='grey',lwd=1,col="red")
+abline(v=mean(EBV_A),lwd=1,col="darkgreen")
+abline(v=mean(EBV_B),lwd=1,col="red")
 dev.off()
 
 
