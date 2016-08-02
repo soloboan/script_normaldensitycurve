@@ -15,16 +15,18 @@ densEBV_B <- density(EBV_B,adjust=2)
 (xlims <- round(range(c(EBV_A,EBV_B)),2))
 (xlims <- xlims+c(-200,200)) ## just fudging the the tails of the graph
 (ylims <- range(c(densEBV_A$y,densEBV_B$y)))
+namesEBV_AB <- c('HLwgt','FLwgt')
 
 ### plot the normal density curve
 pdf('example.pdf')
 plot(1,xlim=xlims,ylim=ylims,xlab='EBV',ylab='Frequency')
-lines(densEBV_A,lty="dotted",col="darkgreen",lwd=2) 
+lines(densEBV_A,lty="dotted",col="darkgreen",lwd=2)
 lines(densEBV_B,lty="dotted",col="red",lwd=2) 
+legend('topright',legend=namesEBV_AB,col=c('darkgreen','red'),bty='n',lty=2)
 
 ## add lines for the means if needed
-abline(v=mean(EBV_A),col='grey',lwd=1)
-abline(v=mean(EBV_B),col='grey',lwd=1)
+abline(v=mean(EBV_A),col='grey',lwd=1,col="darkgreen")
+abline(v=mean(EBV_B),col='grey',lwd=1,col="red")
 dev.off()
 
 
